@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B011A6DD2AE24883005C67FD /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011A6DC2AE24883005C67FD /* APICaller.swift */; };
+		B011A6DF2AE2517D005C67FD /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011A6DE2AE2517D005C67FD /* Title.swift */; };
+		B011A6E12AE2559D005C67FD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011A6E02AE2559D005C67FD /* Extensions.swift */; };
+		B011A6E52AE25BD9005C67FD /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011A6E42AE25BD9005C67FD /* TitleCollectionViewCell.swift */; };
 		B05F4B942ADF95D600310E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F4B932ADF95D600310E12 /* AppDelegate.swift */; };
 		B05F4B962ADF95D600310E12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F4B952ADF95D600310E12 /* SceneDelegate.swift */; };
 		B05F4B982ADF95D600310E12 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F4B972ADF95D600310E12 /* MainTabBarViewController.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B011A6DC2AE24883005C67FD /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		B011A6DE2AE2517D005C67FD /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		B011A6E02AE2559D005C67FD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B011A6E42AE25BD9005C67FD /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		B05F4B902ADF95D600310E12 /* MovieScope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieScope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05F4B932ADF95D600310E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B05F4B952ADF95D600310E12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 			children = (
 				B05F4BB52ADFAAE400310E12 /* CollectionViewTableViewCell.swift */,
 				B05F4BB72AE0054A00310E12 /* HeroHeaderUIView.swift */,
+				B011A6E42AE25BD9005C67FD /* TitleCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +114,7 @@
 		B05F4BB12ADFAA3700310E12 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B011A6DE2AE2517D005C67FD /* Title.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +129,7 @@
 		B05F4BB32ADFAA9F00310E12 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B011A6E02AE2559D005C67FD /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 		B05F4BB42ADFAAA700310E12 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B011A6DC2AE24883005C67FD /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -201,13 +213,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05F4BAD2ADFA20F00310E12 /* SearchViewController.swift in Sources */,
+				B011A6E52AE25BD9005C67FD /* TitleCollectionViewCell.swift in Sources */,
 				B05F4B982ADF95D600310E12 /* MainTabBarViewController.swift in Sources */,
 				B05F4BB62ADFAAE400310E12 /* CollectionViewTableViewCell.swift in Sources */,
+				B011A6DD2AE24883005C67FD /* APICaller.swift in Sources */,
 				B05F4BB82AE0054A00310E12 /* HeroHeaderUIView.swift in Sources */,
 				B05F4BAF2ADFA25500310E12 /* DownloadsViewController.swift in Sources */,
 				B05F4B942ADF95D600310E12 /* AppDelegate.swift in Sources */,
+				B011A6E12AE2559D005C67FD /* Extensions.swift in Sources */,
 				B05F4B962ADF95D600310E12 /* SceneDelegate.swift in Sources */,
 				B05F4BAB2ADF9D3800310E12 /* UpcomingViewController.swift in Sources */,
+				B011A6DF2AE2517D005C67FD /* Title.swift in Sources */,
 				B05F4BA92ADF9D0600310E12 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
