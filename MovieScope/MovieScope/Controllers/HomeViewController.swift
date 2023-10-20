@@ -7,52 +7,71 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+
+class HomeViewController: UIViewController  {
+
+    let sectionTitles: [String] = ["Trending Movies, Trending Tv", "Upcoming Movies", "Top rated"]
     
-    private var homeFeedTable: UITableView = {
-        let homeFeedTable = UITableView(frame: .zero, style: .grouped)
-        homeFeedTable.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
-        return homeFeedTable
+    private var headerView: HeroHeaderUIView?
+    
+    
+    private let homeFeedTable: UITableView = {
+        let table = UITableView(frame: .zero, style: .grouped)
+        table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
+        return table
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
-        configureNavBar()
-        
-        homeFeedTable.dataSource = self
         homeFeedTable.delegate = self
-
+        homeFeedTable.dataSource = self
+        
+        configureNavbar()
+        setupView()
+        
     }
+    
+    private func setupView() {
+        view.backgroundColor = .systemBackground
+        
+        view.addSubview(homeFeedTable)
+        
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        homeFeedTable.tableHeaderView = headerView
+    }
+
+    
+    
+    private func configureNavbar() {
+        var image = UIImage(named: "movieLogo")
+        image = image?.withRenderingMode(.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
+            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
+        ]
+
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
     }
+
+
     
-    private func setupView() {
-        
-        view.backgroundColor = .black
-        
-        view.addSubview(homeFeedTable)
-        
-        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
-        homeFeedTable.tableHeaderView = headerView
-                                          
-    }
-    
-    private func configureNavBar() {
-        var image = UIImage(named: "logo")
-        image?.withRenderingMode(.alwaysOriginal)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
-    }
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 20
+        return sectionTitles.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,6 +79,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
@@ -71,10 +91,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return 200
     }
     
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
     
-    
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let defaultOffset = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + defaultOffset
+        
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
+    }
 }
