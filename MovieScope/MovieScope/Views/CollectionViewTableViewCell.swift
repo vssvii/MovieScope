@@ -23,7 +23,7 @@ class CollectionViewTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setupView()
+        contentView.addSubview(collectionView)
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -37,12 +37,6 @@ class CollectionViewTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         collectionView.frame = contentView.bounds
-    }
-    
-    private func setupView() {
-        
-        contentView.backgroundColor = .systemPink
-        contentView.addSubview(collectionView)
     }
 }
 
