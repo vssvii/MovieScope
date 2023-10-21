@@ -15,6 +15,7 @@
 		B011A6EA2AE27C74005C67FD /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B011A6E92AE27C74005C67FD /* SDWebImageMapKit */; };
 		B011A6EC2AE290D6005C67FD /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011A6EB2AE290D6005C67FD /* TitleTableViewCell.swift */; };
 		B011A6EE2AE292FE005C67FD /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011A6ED2AE292FE005C67FD /* TitleViewModel.swift */; };
+		B011A6F02AE2B25F005C67FD /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011A6EF2AE2B25F005C67FD /* SearchResultsViewController.swift */; };
 		B05F4B942ADF95D600310E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F4B932ADF95D600310E12 /* AppDelegate.swift */; };
 		B05F4B962ADF95D600310E12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F4B952ADF95D600310E12 /* SceneDelegate.swift */; };
 		B05F4B982ADF95D600310E12 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F4B972ADF95D600310E12 /* MainTabBarViewController.swift */; };
@@ -35,6 +36,7 @@
 		B011A6E42AE25BD9005C67FD /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		B011A6EB2AE290D6005C67FD /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		B011A6ED2AE292FE005C67FD /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
+		B011A6EF2AE2B25F005C67FD /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		B05F4B902ADF95D600310E12 /* MovieScope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieScope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05F4B932ADF95D600310E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B05F4B952ADF95D600310E12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B011A6F12AE2B2B1005C67FD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B05F4BA82ADF9D0600310E12 /* HomeViewController.swift */,
+				B05F4BAA2ADF9D3800310E12 /* UpcomingViewController.swift */,
+				B05F4BAC2ADFA20F00310E12 /* SearchViewController.swift */,
+				B05F4BAE2ADFA25500310E12 /* DownloadsViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B011A6F22AE2B2C1005C67FD /* General */ = {
+			isa = PBXGroup;
+			children = (
+				B011A6EF2AE2B25F005C67FD /* SearchResultsViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		B05F4B872ADF95D600310E12 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +122,8 @@
 		B05F4BA72ADF995100310E12 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B05F4BA82ADF9D0600310E12 /* HomeViewController.swift */,
-				B05F4BAA2ADF9D3800310E12 /* UpcomingViewController.swift */,
-				B05F4BAC2ADFA20F00310E12 /* SearchViewController.swift */,
-				B05F4BAE2ADFA25500310E12 /* DownloadsViewController.swift */,
+				B011A6F22AE2B2C1005C67FD /* General */,
+				B011A6F12AE2B2B1005C67FD /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,6 +257,7 @@
 				B05F4BB82AE0054A00310E12 /* HeroHeaderUIView.swift in Sources */,
 				B05F4BAF2ADFA25500310E12 /* DownloadsViewController.swift in Sources */,
 				B05F4B942ADF95D600310E12 /* AppDelegate.swift in Sources */,
+				B011A6F02AE2B25F005C67FD /* SearchResultsViewController.swift in Sources */,
 				B011A6E12AE2559D005C67FD /* Extensions.swift in Sources */,
 				B05F4B962ADF95D600310E12 /* SceneDelegate.swift in Sources */,
 				B05F4BAB2ADF9D3800310E12 /* UpcomingViewController.swift in Sources */,
