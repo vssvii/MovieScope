@@ -24,7 +24,7 @@ class DownloadsViewController: UIViewController {
         
         view.backgroundColor = .systemBackground
         
-        title = "Downloads"
+        title = "downloads".localized
         view.addSubview(downloadTable)
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always

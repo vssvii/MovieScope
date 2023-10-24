@@ -22,7 +22,10 @@ class HomeViewController: UIViewController  {
     private var randomTrendingMovie: Title?
     private var headerView: HeroHeaderUIView?
 
-    let sectionTitles: [String] = ["Trending Movies", "Popular", "Trending Tv", "Upcoming Movies", "Top rated"]
+    let sectionTitles: [String] = ["trend_movies".localized, "popular".localized,
+        "trend_tv".localized,
+        "upcom_movies".localized,
+        "top_rated".localized]
     
     
     private let homeFeedTable: UITableView = {

@@ -20,7 +20,6 @@ class SearchViewController: UIViewController {
     
     private let searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: SearchResultsViewController())
-        controller.searchBar.placeholder = "Search for a Movie or a Tv show"
         controller.searchBar.searchBarStyle = .minimal
         return controller
     }()
@@ -29,7 +28,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
-        title = "Search"
+        title = "search".localized
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         

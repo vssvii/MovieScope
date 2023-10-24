@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  MovieScope
+
+  Created by Developer on 24.10.2023.
+  
+*/
+
+// MARK: Main
+
+"trend_movies" = "Trending Movies";
+"popular" = "Popular";
+"trend_tv" = "Trending TV";
+"upcom_movies" = "Upcoming Movies";
+"top_rated" = "Top rated";
+"download" = "Download";
+"watch" = "Watch";
+
+// MARK: TabBar
+
+"home" = "Home";
+"upcoming" = "Upcoming";
+"search" = "Search";
+"downloads" = "Downloads";
