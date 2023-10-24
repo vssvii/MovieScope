@@ -5,7 +5,7 @@
   Created by Developer on 24.10.2023.
   
 */
-
+// MARK: Main
 
 "trend_movies" = "Трендовые фильмы";
 "popular" = "Популярные";
@@ -22,3 +22,8 @@
 "upcoming" = "Скоро";
 "search" = "Поиск";
 "downloads" = "Загрузки";
+
+
+// MARK: Languages
+
+"language" = "ru-RU";

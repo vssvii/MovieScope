@@ -22,3 +22,7 @@
 "upcoming" = "Upcoming";
 "search" = "Search";
 "downloads" = "Downloads";
+
+// MARK: Languages
+
+"language" = "en-US";

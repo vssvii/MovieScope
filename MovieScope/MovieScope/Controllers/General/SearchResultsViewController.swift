@@ -65,11 +65,11 @@ extension SearchResultsViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         let title = titles[indexPath.row]
-        let titleName = title.original_title ?? ""
+        let titleName = title.title ?? ""
         APICaller.shared.getMovie(with: titleName) { [weak self] result in
             switch result {
             case .success(let videoElement):
-                self?.delegate?.SearchResultsViewControllerDidTapItem(TitlePreviewViewModel(title: title.original_title ?? "", youtubeView: videoElement, titleOverview: title.overview ?? ""))
+                self?.delegate?.SearchResultsViewControllerDidTapItem(TitlePreviewViewModel(title: title.title ?? "", youtubeView: videoElement, titleOverview: title.overview ?? ""))
 
             case .failure(let error):
                 print(error.localizedDescription)

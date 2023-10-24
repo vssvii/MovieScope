@@ -92,7 +92,7 @@ extension CollectionViewTableViewCell: UICollectionViewDataSource, UICollectionV
         collectionView.deselectItem(at: indexPath, animated: true)
         
         let title = titles[indexPath.row]
-        guard let titleName = title.original_title ?? title.original_title else {
+        guard let titleName = title.title ?? title.title else {
             return
         }
         
