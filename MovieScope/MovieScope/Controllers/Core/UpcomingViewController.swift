@@ -22,7 +22,7 @@ class UpcomingViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
-        title = "Upcoming"
+        title = "upcoming".localized
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         
@@ -68,7 +68,7 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let title = titles[indexPath.row]
-        cell.configure(name: title.original_title ?? "Unknown title name", path: title.poster_path ?? "")
+        cell.configure(name: title.title ?? "Unknown title name", path: title.poster_path ?? "")
         return cell
     }
     
@@ -77,7 +77,7 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
         
         let title = titles[indexPath.row]
         
-        guard let titleName = title.original_title ?? title.original_title else {
+        guard let titleName = title.title ?? title.title else {
             return
         }
         

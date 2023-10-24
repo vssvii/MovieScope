@@ -22,7 +22,10 @@ class HomeViewController: UIViewController  {
     private var randomTrendingMovie: Title?
     private var headerView: HeroHeaderUIView?
 
-    let sectionTitles: [String] = ["Trending Movies", "Popular", "Trending Tv", "Upcoming Movies", "Top rated"]
+    let sectionTitles: [String] = ["trend_movies".localized, "popular".localized,
+        "trend_tv".localized,
+        "upcom_movies".localized,
+        "top_rated".localized]
     
     
     private let homeFeedTable: UITableView = {
@@ -51,7 +54,7 @@ class HomeViewController: UIViewController  {
             case .success(let titles):
                 let selectedTitle = titles.randomElement()
                 self?.randomTrendingMovie = titles.randomElement()
-                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""))
+                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.title ?? "", posterURL: selectedTitle?.poster_path ?? ""))
             case .failure(let error):
                 print(error.localizedDescription)
             }

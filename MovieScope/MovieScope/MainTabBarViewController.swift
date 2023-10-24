@@ -39,7 +39,7 @@ class MainTabBarViewController: UITabBarController {
             "arrow.down.to.line"
         ]
         
-        let tabBarItemTitles = ["Home", "Coming Soon", "Top Search", "Downloads"]
+        let tabBarItemTitles = ["home".localized, "upcoming".localized, "search".localized, "downloads".localized]
         
         var navigationControllers: [UINavigationController] = []
 

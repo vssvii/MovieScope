@@ -30,7 +30,7 @@ class TitlePreviewViewController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .red
-        button.setTitle("Download", for: .normal)
+        button.setTitle("download".localized, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true

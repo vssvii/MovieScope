@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  MovieScope
+
+  Created by Developer on 24.10.2023.
+  
+*/
+// MARK: Main
+
+"trend_movies" = "Сәнді фильмдер";
+"popular" = "Танымал";
+"trend_tv" = "Сәнді TV";
+"upcom_movies" = "Алдағы фильмдер";
+"top_rated" = "Ең жоғары рейтинг";
+"download" = "Жүктеп алу";
+"watch" = "Қарау";
+
+// MARK: TabBar
+
+"home" = "Басты";
+"upcoming" = "Жақында";
+"search" = "Іздеу";
+"downloads" = "Жүктеулер";
+
+// MARK: Languages
+
+"language" = "ru-RU";
