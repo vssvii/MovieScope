@@ -60,7 +60,7 @@ Clicking on the "Search" tab opens a list and a search bar where you can find mo
 
 ![Снимок экрана 2023-10-26 в 12 34 37](https://github.com/vssvii/MovieScope/assets/28200789/20b19182-4084-427b-91f9-05ca359fad9f)
 
-![Снимок экрана 2023-10-26 в 14 39 01](https://github.com/vssvii/MovieScope/assets/28200789/120aea3e-b479-4f80-98a2-4982175a550d)
+![Снимок экрана 2023-10-26 в 14 50 11](https://github.com/vssvii/MovieScope/assets/28200789/a1b6686d-9cc3-4445-ae44-a28f9b871b0b)
 
 ![Снимок экрана 2023-10-26 в 12 41 53](https://github.com/vssvii/MovieScope/assets/28200789/51aa5e9f-a7ee-48c9-a832-710297e317f5)
 
