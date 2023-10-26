@@ -83,16 +83,9 @@ The movie can be deleted from the "Downloads" by swiping to the left
 ![Снимок экрана 2023-10-26 в 15 27 54](https://github.com/vssvii/MovieScope/assets/28200789/47b03daf-e46e-437b-9081-15e99b6d766c)
 
 
-Additionally, the application has a translation in 3 languages:
+Additionally, the application has a translation in 3 languages: Kazakh, Russian, English
 
-Kazakh
-Russian
-English
-Дополнительно в приложении присутствует перевод на 3 языках:
-
-Казахский
-Русский
-Английский
+Дополнительно в приложении присутствует перевод на 3 языках: Казахский, Русский, Английский
 
 
 ![Снимок экрана 2023-10-26 в 15 35 47](https://github.com/vssvii/MovieScope/assets/28200789/1d7631e2-68fa-4ee8-b314-7f94f94e5a0a)
