@@ -14,6 +14,7 @@ class TitlePreviewViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         label.font = .systemFont(ofSize: 22, weight: .bold)
         return label
     }()
@@ -55,11 +56,18 @@ class TitlePreviewViewController: UIViewController {
         view.addSubview(downloadButton)
         
         configureConstraints()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .done, target: self, action: #selector(backAction))
+        navigationItem.leftBarButtonItem?.tintColor = .red
+    }
+    
+    @objc func backAction() {
+        navigationController?.popViewController(animated: true)
     }
     
     func configureConstraints() {
         let webViewConstraints = [
-            webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            webView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             webView.heightAnchor.constraint(equalToConstant: 250)
@@ -68,6 +76,7 @@ class TitlePreviewViewController: UIViewController {
         let titleLabelConstraints = [
             titleLabel.topAnchor.constraint(equalTo: webView.bottomAnchor, constant: 20),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
         ]
         
         let overviewLabelConstraints = [

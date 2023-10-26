@@ -96,10 +96,11 @@ extension CollectionViewTableViewCell: UICollectionViewDataSource, UICollectionV
             return
         }
         
-        APICaller.shared.getMovie(with: titleName + "trailer") { [weak self] result in
+        APICaller.shared.getMovie(with: titleName + "trailer".localized) { [weak self] result in
             switch result {
             case .success(let videoElement):
                 let title = self?.titles[indexPath.row]
+                print(title)
                 guard let titleOverview = title?.overview else {
                     return
                 }

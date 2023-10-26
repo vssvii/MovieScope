@@ -69,7 +69,7 @@ extension DownloadsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let title = titles[indexPath.row]
-        cell.configure(name: title.original_title ?? "Unknown title name", path: title.poster_path ?? "")
+        cell.configure(name: title.title ?? "Unknown title name", path: title.poster_path ?? "")
         return cell
     }
     

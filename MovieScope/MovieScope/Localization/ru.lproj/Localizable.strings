@@ -14,6 +14,7 @@
 "top_rated" = "Высший рейтинг";
 "download" = "Скачать";
 "watch" = "Смотреть";
+"trailer" = "трейлер";
 
 
 // MARK: TabBar

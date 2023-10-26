@@ -89,7 +89,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
         
-        APICaller.shared.getMovie(with: titleName) { result in
+        APICaller.shared.getMovie(with: titleName + "trailer".localized) { result in
             switch result {
             case .success(let videoElement):
                 DispatchQueue.main.async {

@@ -78,16 +78,18 @@ class HomeViewController: UIViewController  {
     
     
     private func configureNavbar() {
-        var image = UIImage(named: "movieLogo")
+        var image = UIImage(named: "logo")
         image = image?.withRenderingMode(.alwaysOriginal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "MovieScope", menu: .none)
+        navigationItem.leftBarButtonItem?.tintColor = .red
         
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
             UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
         ]
 
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .red
     }
     
     
@@ -119,6 +121,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             APICaller.shared.getTrendingMovies { result in
                 switch result {
                 case .success(let titles):
+                    print(titles)
                     cell.configure(with: titles)
                 case .failure(let error):
                     print(error.localizedDescription)
@@ -188,7 +191,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let header = view as? UITableViewHeaderFooterView else {return}
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
-        header.textLabel?.textColor = .white
+        header.textLabel?.textColor = .black
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
