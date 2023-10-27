@@ -11,19 +11,9 @@
 ### Данные взяты с API
 
 
-The project consists of:
+The project consists of: Main Page, Upcoming movies page, Search movies page, Downloaded movies page
 
-Main Page
-Upcoming movies page
-Search movies page
-Downloaded movies page
-
-Проект состоит из:
-
-Главная страница
-Страница предстоящих фильмов
-Страница поиска фильмов
-Страница скачанных фильмов
+Проект состоит из: Главная страница, Страница предстоящих фильмов, Страница поиска фильмов, Страница скачанных фильмов
 
 On the main page, movies are divided into categories: Trending Movies, Popular, Trending on TV, Upcoming Movies, Top Rated
 
