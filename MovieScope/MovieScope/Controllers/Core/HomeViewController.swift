@@ -19,6 +19,7 @@ enum Sections: Int {
 
 class HomeViewController: UIViewController  {
     
+    
     private var randomTrendingMovie: Title?
     private var headerView: HeroHeaderUIView?
 
@@ -57,6 +58,7 @@ class HomeViewController: UIViewController  {
                 self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.title ?? "", posterURL: selectedTitle?.poster_path ?? ""))
             case .failure(let error):
                 print(error.localizedDescription)
+                print("Welcome!")
             }
         }
     }
